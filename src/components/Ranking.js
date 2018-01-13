@@ -25,7 +25,7 @@ class Ranking extends PureComponent {
 
   static defaultProps = {
     profiles: [],
-    onSelectProfile: () => {},
+    onSelectProfile: () => { },
   }
 
   constructor(props) {

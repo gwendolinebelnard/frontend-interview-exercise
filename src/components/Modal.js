@@ -62,7 +62,7 @@ const StyledBlock = styled.div`
 
 // Compatibility with react@16 !
 class ROM extends ROModal {
-  focus = () => {};
+  focus = () => { };
 }
 
 const Modal = ({
@@ -70,26 +70,26 @@ const Modal = ({
   show,
   onHide,
 }) => (
-  <ROM
-    aria-labelledby="modal"
-    show={show}
-    style={modalStyle}
-    backdropStyle={backdropStyle}
-    onEscapeKeyDown={onHide}
-    onBackdropClick={onHide}
-    onHide={onHide}
-  >
-    <StyledContent>
-      <StyledBlock>
-        <StyledLogo src={logo} width="88" alt="Pukka Logo" />
-        {children}
-      </StyledBlock>
-      <StyledClose onClick={onHide}>
-        ESC
+    <ROM
+      aria-labelledby="modal"
+      show={show}
+      style={modalStyle}
+      backdropStyle={backdropStyle}
+      onEscapeKeyDown={onHide}
+      onBackdropClick={onHide}
+      onHide={onHide}
+    >
+      <StyledContent>
+        <StyledBlock>
+          <StyledLogo src={logo} width="88" alt="Pukka Logo" />
+          {children}
+        </StyledBlock>
+        <StyledClose onClick={onHide}>
+          ESC
       </StyledClose>
-    </StyledContent>
-  </ROM>
-);
+      </StyledContent>
+    </ROM>
+  );
 
 Modal.propTypes = {
   children: PropTypes.node,

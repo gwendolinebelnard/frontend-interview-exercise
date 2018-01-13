@@ -19,6 +19,9 @@ const StyledProfilePicDefault = styles.span`
 export const StyledProfilePicImg = styles.img`
   border-radius: 50%;
   display: block;
+  width: 48px;
+  margin-left: 16px;
+  margin-right: 24px;
 `;
 
 
@@ -32,11 +35,11 @@ const ProfilePic = ({
   userName,
   size,
 }) => (
-  picture ?
-    <StyledProfilePicImg src={picture} width={size} height={size} alt={userName} />
-    :
-    <StyledProfilePicDefault size={size}>{getInitials(userName)}</StyledProfilePicDefault>
-);
+    picture ?
+      <StyledProfilePicImg src={picture} width={size} height={size} alt={userName} />
+      :
+      <StyledProfilePicDefault size={size}>{getInitials(userName)}</StyledProfilePicDefault>
+  );
 
 ProfilePic.defaultProps = {
   picture: null,

@@ -25,9 +25,9 @@ class App extends Component {
       <div>
         <Ranking
           profiles={this.state.profiles}
-          onSelectProfile={() => {}}
+          onSelectProfile={() => { }}
         />
-        <Modal show={false} onHide={() => {}}>
+        <Modal show={false} onHide={() => { }}>
           <UserInfo
             picture={null}
             name=""

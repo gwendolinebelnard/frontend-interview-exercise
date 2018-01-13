@@ -7,13 +7,31 @@ export const StyledRanking = styled.ol`
   margin: 0 auto;
   padding: 0;
   background-color: ${neutrals.lightest};
+  border-radius: 4px;
+  box-shadow : 0px 4px 8px #DAE2E6;
+  font-size: 13px;
+  font-family: Lato;
+  color: #2C2D30;
+  font-weight: bold;
 
   > li {
     counter-increment: item;
+    display: flex;
+    align-items : center;
+    height: 84px;
+    line-height: 84px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+    :nth-child(odd) {
+      background-color: #F7F9FB;
+    }
 
     ::before {
       content: counter(item);
       margin-right: ${spacings.m}px;
+      margin-left: 40px;
+      display: flex;
     }
 
     :nth-child(1)::after,
@@ -21,6 +39,7 @@ export const StyledRanking = styled.ol`
     :nth-child(3)::after {
       font-size: 16px;
       margin-left: ${spacings.s}px;
+      margin-right: 32px;
     }
 
     :nth-child(1)::after {
@@ -39,6 +58,7 @@ export const StyledRanking = styled.ol`
 
 export const StyledPoints = styled.span`
   margin-left: auto;
+  margin-right: 32px;
 `;
 
 export const StyledImg = styled.div`
